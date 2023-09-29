@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Outreach Digital{% endblock %}
+
+{% block stylesheets %}
+    <link href="/assets/styles/home.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <div class="logo-container">
+            <img src="{{ asset('assets/img/logo_trans.png') }}" class="logo">
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-item">Acasa</div>
+            <div class="menu-item">Cine suntem</div>
+            <div class="menu-item">Servicii</div>
+            <div class="menu-item">Contact</div>
+        </div>
+    </div>
+
+    <div class="wave-container">
+        <!--Content before waves-->
+        <div class="inner-header flex" style="visibility: hidden">
+            <h1>Digital Outreach</h1>
+        </div>
+        <!--Waves Container-->
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="#4C74FC" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="#4C74FC" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="#AEAEE6" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#EEEDFF" />
+                </g>
+            </svg>
+        </div>
+        <!--Waves end-->
+
+    </div>
+    <!--Header ends-->
+
+    <div class="sections-container">
+        <div class="heading-section">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <img src="{{ asset('assets/img/img_show.png') }}" class="heading-section-image">
+        </div>
+
+        <div class="section" style="background: linear-gradient(180deg, #EEEDFF 50%, #4C74FC 50%);">
+            <div class="normal-tab" id="box1" style="transition: opacity 0.1s;">
+                <h3>Lorem ipsum</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div class="normal-tab" id="box2" style="transition: opacity 0.4s;">
+                <h3>Lorem ipsum</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div class="normal-tab" id="box3" style="transition: opacity 1.2s;">
+                <h3>Lorem ipsum</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+        </div>
+
+        <div class="section" style="background-color: #4C74FC; height: 750px; margin-top: 0"></div>
+    </div>
+
+
+    <script>
+        let box1 = document.getElementById('box1');
+        let box2 = document.getElementById('box2');
+        let box3 = document.getElementById('box3');
+
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > box1.getBoundingClientRect().top) {
+                box1.style.opacity = '1';
+            }
+            if (document.documentElement.scrollTop > box2.getBoundingClientRect().top) {
+                box2.style.opacity = '1';
+            }
+            if (document.documentElement.scrollTop > box3.getBoundingClientRect().top) {
+                box3.style.opacity = '1';
+            }
+        }
+    </script>
+{% endblock %}

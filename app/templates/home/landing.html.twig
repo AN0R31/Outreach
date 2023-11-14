@@ -46,31 +46,60 @@
     <!--Header ends-->
 
     <div class="sections-container">
-        <div class="heading-section">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-            <img src="{{ asset('assets/img/img_show.png') }}" class="heading-section-image">
+        <div class="heading-section" style="margin-top: 0.5rem;">
+            <h1>Imbinam viziunea cu strategia pentru un succes garantat!</h1>
+            <img src="{{ asset('assets/img/test.png') }}" class="heading-section-image">
         </div>
 
-        <div class="section" style="background: linear-gradient(180deg, #EEEDFF 50%, #4C74FC 50%);">
-            <div class="normal-tab" id="box1" style="transition: opacity 0.1s;">
-                <h3>Lorem ipsum</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-            </div>
-            <div class="normal-tab" id="box2" style="transition: opacity 0.4s;">
-                <h3>Lorem ipsum</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-            </div>
-            <div class="normal-tab" id="box3" style="transition: opacity 1.2s;">
-                <h3>Lorem ipsum</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        <div class="section" style="margin-top: 3rem;">
+            <div class="text-small">Folosit si recomandat de peste 10 branduri</div>
+        </div>
+
+        <div class="section" style="margin-top: 0.25rem;">
+            <div class="collaborators-section">
+                <img src="{{ asset('assets/img/random_logo.png') }}" class="logo-collaborators">
+                <img src="{{ asset('assets/img/random_logo.png') }}" class="logo-collaborators">
+                <img src="{{ asset('assets/img/random_logo.png') }}" class="logo-collaborators">
             </div>
         </div>
 
-        <div class="section" style="background-color: #4C74FC; height: 750px; margin-top: 0"></div>
+        <div class="section" style="margin-top: 4rem;">
+            <div class="text-cta">Incepe turul online!</div>
+        </div>
+        <div class="section" style="margin-top: 0.5rem;">
+            <img id="nextButton1" src="{{ asset('assets/svg/down-arrow-in-circle.svg') }}" class="general-svg">
+        </div>
+
+{#        <div class="section" style="background: linear-gradient(180deg, #EEEDFF 50%, #4C74FC 50%);">#}
+{#            <div class="normal-tab" id="box1" style="transition: opacity 0.1s;">#}
+{#                <h3>Lorem ipsum</h3>#}
+{#                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>#}
+{#            </div>#}
+{#            <div class="normal-tab" id="box2" style="transition: opacity 0.4s;">#}
+{#                <h3>Lorem ipsum</h3>#}
+{#                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>#}
+{#            </div>#}
+{#            <div class="normal-tab" id="box3" style="transition: opacity 1.2s;">#}
+{#                <h3>Lorem ipsum</h3>#}
+{#                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <div class="section" style="background-color: #4C74FC; height: 750px; margin-top: 0"></div>#}
     </div>
 
 
     <script>
+        //next button example
+        let nextButton1 = document.getElementById('nextButton1');
+        nextButton1.addEventListener("click", ev => {
+            nextButton1.classList.add('pulse')
+            setTimeout(function() {
+                nextButton1.classList.remove('pulse')
+            }, 500);
+        })
+
+
         let box1 = document.getElementById('box1');
         let box2 = document.getElementById('box2');
         let box3 = document.getElementById('box3');

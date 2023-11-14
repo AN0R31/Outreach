@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300:400');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html, body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     background-color: #EEEDFF;
     margin: 0;
     padding: 0;
@@ -43,7 +44,7 @@ html, body {
 
 .menu-item {
     font-size: 15px;
-    font-weight: lighter;
+    font-weight: 400;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
@@ -59,7 +60,7 @@ html, body {
 
 .section {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 1.5rem;
     height: fit-content;
     display: flex;
     justify-content: center;
@@ -68,10 +69,10 @@ html, body {
 
 .heading-section {
     width: 100%;
-    margin-top: 50px;
+    margin-top: -1rem;
     height: fit-content;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -79,13 +80,18 @@ html, body {
     max-width: 40%;
     color: #4C74FC;
     text-transform: uppercase;
-    margin-left: 10%;
     font-size: 55px;
-    font-weight: bolder;
+    margin-left: 10%;
+    margin-right: -5%;
+    font-weight: normal;
+    letter-spacing: 1px;
+    word-spacing: 9px;
 }
 
 .heading-section-image {
-    width: 50%;
+    width: 60%;
+    z-index: 100;
+    filter: drop-shadow(0 0 0.75rem rgba(76, 116, 252, 0.75));
 }
 
 .normal-tab {
@@ -115,15 +121,72 @@ html, body {
 
 h1 {
     font-family: 'Lato', sans-serif;
-    font-weight:300;
-    letter-spacing: 2px;
+    font-weight:600;
+    letter-spacing: 1px;
     font-size:48px;
 }
+
 p {
     font-family: 'Lato', sans-serif;
     letter-spacing: 1px;
     font-size:14px;
     color: #333333;
+}
+
+.text-small {
+    font-size: 0.8rem;
+    font-weight: bolder;
+    color: rgba(76, 116, 252, 0.35);
+}
+
+.text-cta {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #4C74FC;
+}
+
+.general-svg {
+    width: 5rem;
+    cursor: pointer;
+    transition: width;
+    transition-duration: 0.1s;
+}
+
+.general-svg:hover {
+    width: 5.5rem;
+}
+
+.collaborators-section {
+    width: 75%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pulse:hover,
+.pulse:focus {
+    background-color: rgba(76, 116, 252, 0.15);
+    border-radius: 100%;
+    animation: pulse 0.5s;
+    box-shadow: 0 0 0 1.5em transparent;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(76, 116, 252, 0.5); }
+}
+
+.logo-collaborators {
+    width: 20%;
+    filter: opacity(35%);
+    cursor: pointer;
+    transition: width;
+    transition-duration: 0.2s;
+}
+
+.logo-collaborators:hover {
+    width: 25%;
+    filter: opacity(50%);
 }
 
 .wave-container {

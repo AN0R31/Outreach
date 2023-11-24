@@ -7,16 +7,15 @@
 {% endblock %}
 
 {% block body %}
-    <div class="header">
+    <div class="header" id="header">
         <div class="logo-container">
             <img src="{{ asset('assets/img/logo_trans.png') }}" class="logo">
         </div>
-
         <div class="menu-container">
-            <div class="menu-item">Acasa</div>
-            <div class="menu-item">Cine suntem</div>
-            <div class="menu-item">Servicii</div>
-            <div class="menu-item">Contact</div>
+            <div class="menu-item" onclick="goToSection('header')">Acasa</div>
+            <div class="menu-item" onclick="goToSection('whyUs')">Cine suntem</div>
+            <div class="menu-item" onclick="goToSection('services')">Servicii</div>
+            <div class="menu-item" onclick="goToSection('contact')">Contact</div>
         </div>
     </div>
 
@@ -45,13 +44,13 @@
     </div>
     <!--Header ends-->
 
-    <div class="sections-container">
+    <div class="sections-container" style="margin-top: -2em">
         <div class="heading-section" style="margin-top: 0.5rem;">
             <h1>Imbinam viziunea cu strategia pentru un succes garantat!</h1>
-            <img src="{{ asset('assets/img/test.png') }}" class="heading-section-image">
+            <img src="{{ asset('assets/img/img_show.png') }}" class="heading-section-image">
         </div>
 
-        <div class="section" style="margin-top: 3rem;">
+        <div class="section">
             <div class="text-small">Folosit si recomandat de peste 10 branduri</div>
         </div>
 
@@ -67,54 +66,139 @@
             <div class="text-cta">Incepe turul online!</div>
         </div>
         <div class="section" style="margin-top: 0.5rem;">
-            <img id="nextButton1" src="{{ asset('assets/svg/down-arrow-in-circle.svg') }}" class="general-svg">
+            <img onclick="goToSection('whyUs')" src="{{ asset('assets/svg/down-arrow-in-circle.svg') }}" class="general-svg nextButton">
         </div>
 
+        <div id="whyUs" class="generic-section">
+            <h1>De ce noi?</h1>
+            <ul>
+                <li style="margin-left: -30%" class="on-scroll-visibility">
+                    <div class="li-title left">Dezlantuim potentialul</div>
+                    Noi credem cu tarie ca orice business are un potential aparte nedescoperit. Scopul nostru nu este numai sa il dezvaluim,ci sa il potentam cu fiecare campanie creativa pe care o oferim.
+                </li>
+                <li style="margin-right: -30%" class="on-scroll-visibility">
+                    <div class="li-title right">Suntem adeptii strategiei</div>
+                    Suntem oameni dornici de a afla mai mult. De aceea suntem intr-un continuu studiu al pietei,al unor noi strategii,al unor noi mijloace de a creea continut original adaptat perfect la nevoile dumneavoastra.
+                </li>
+                <li style="margin-left: -30%" class="on-scroll-visibility">
+                    <div class="li-title left">Povestea ta, panza noastra</div>
+                    Noi nu vrem doar sa creem campanii de marketing. Scopul nostru este sa slefuim povestiile dumneavoastra in asa fel incat sa rezoneze cu principiile business ului in care investiti si credeti. Pentru noi,brand ul tau nu este doar un logo,ci o experienta.
+                </li>
+                <li style="margin-right: -30%" class="on-scroll-visibility">
+                    <div class="li-title right">Suntem cu tine oriunde te-ai afla</div>
+                    Am optat pentru mediul online pentru a iti putea fi alaturi in cele mai mari proiecte ale tale de oriunde foarte usor si comfortabil.
+                </li>
+                <li style="margin-left: -30%" class="on-scroll-visibility">
+                    <div class="li-title left">Focusati pe tehnologie</div>
+                    Cu noi nu trebuie sa iti faci probleme in privinta tehnologizarii brandului tau. Suntem o echipa tanara, adaptata la tot ce apare nou, dispusi sa invete orice pentru a oferi cele mai calitative materiale online.
+                </li>
+                <li style="margin-right: -30%" class="on-scroll-visibility">
+                    <div class="li-title right">Colaborare</div>
+                    Echipa noastra crede in ideea ca oamenii ajuta alti oameni. De aceea tindem sa creem o relatie stransa si un mediu relaxat cu clientii nostrii pentru ca rezultatul final sa fie unul de cea mai buna calitate transpunand fix viziunea dumneavoastra.
+                </li>
+            </ul>
 
-{#        <div class="section" style="background: linear-gradient(180deg, #EEEDFF 50%, #4C74FC 50%);">#}
-{#            <div class="normal-tab" id="box1" style="transition: opacity 0.1s;">#}
-{#                <h3>Lorem ipsum</h3>#}
-{#                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>#}
-{#            </div>#}
-{#            <div class="normal-tab" id="box2" style="transition: opacity 0.4s;">#}
-{#                <h3>Lorem ipsum</h3>#}
-{#                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>#}
-{#            </div>#}
-{#            <div class="normal-tab" id="box3" style="transition: opacity 1.2s;">#}
-{#                <h3>Lorem ipsum</h3>#}
-{#                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>#}
-{#            </div>#}
-{#        </div>#}
-{##}
-{#        <div class="section" style="background-color: #4C74FC; height: 750px; margin-top: 0"></div>#}
+            <div class="section" style="margin-top: 4rem;">
+                <div class="text-cta">Haideti sa pasim impreuna intr-o lume in care exista posibilitati nenumarate!</div>
+            </div>
+            <div class="section" style="margin-top: 0.5rem;">
+                <img onclick="goToSection('services')" src="{{ asset('assets/svg/down-arrow-in-circle.svg') }}" class="general-svg nextButton">
+            </div>
+        </div>
+
+        <div id="services" class="generic-section">
+            <h1>Serviciile noastre</h1>
+            <div class="text-small" style="font-size: 20px; width: 70%; margin-top: 30px;">
+                Noi nu vom fi doar o echipa de marketing pentru proiectul dumneavoastra. Noi suntem niste visatori si arhitecti ai visurilor dumneavoastra, dar si campioni ai succesului! Bine ati venit intr-un loc in care aspiratiile dumneavoastra sunt inspiratia noastra!
+            </div>
+            <div class="services-card-line-wrapper">
+                <div class="services-card on-scroll-visibility">Branding / Rebranding</div>
+                <div class="services-card on-scroll-visibility">Strategie Digitala</div>
+                <div class="services-card on-scroll-visibility">Web Design</div>
+            </div>
+            <div class="services-card-line-wrapper">
+                <div class="services-card on-scroll-visibility">Google / YouTube ADS</div>
+                <div class="services-card on-scroll-visibility">Facebook ADS</div>
+                <div class="services-card on-scroll-visibility">Social Media Marketing</div>
+            </div>
+            <div class="services-card-line-wrapper">
+                <div class="services-card on-scroll-visibility">Search Engine Optimizations</div>
+                <div class="services-card on-scroll-visibility">Copyrighting</div>
+                <div class="services-card on-scroll-visibility">Promotionale</div>
+            </div>
+
+            <div class="section" style="margin-top: 10rem;">
+                <div class="text-cta">Cum arata o colaborare cu noi?</div>
+            </div>
+            <div class="section" style="margin-top: 0.5rem;">
+                <img onclick="goToSection('methodology')" src="{{ asset('assets/svg/down-arrow-in-circle.svg') }}" class="general-svg nextButton">
+            </div>
+        </div>
+
+    <div id="methodology" class="generic-section">
+        <h1>Metodologie</h1>
+        <div class="line">
+            <div class="text-cta line-element left">
+                <div class="line-text">Ne contactezi</div>
+                <div class="dot-container">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="text-cta line-element right">
+                <div class="dot"></div>
+                <div class="line-text">Ne intalnim</div>
+            </div>
+            <div class="text-cta line-element left">
+                <div class="line-text">Planificam</div>
+                <div class="dot"></div>
+            </div>
+            <div class="text-cta line-element right">
+                <div class="dot"></div>
+                <div class="line-text">Research</div>
+            </div>
+            <div class="text-cta line-element left">
+                <div class="line-text">Implementam</div>
+                <div class="dot"></div>
+            </div>
+            <div class="text-cta line-element right">
+                <div class="dot"></div>
+                <div class="line-text">Feedback</div>
+            </div>
+            <div class="text-cta line-element left">
+                <div class="line-text">Rezultate</div>
+                <div class="dot"></div>
+            </div>
+        </div>
     </div>
+    </div>
+
+    <div style="height: 500px"></div>
 
 
     <script>
-        //next button example
-        let nextButton1 = document.getElementById('nextButton1');
-        nextButton1.addEventListener("click", ev => {
-            nextButton1.classList.add('pulse')
-            setTimeout(function() {
-                nextButton1.classList.remove('pulse')
-            }, 500);
+        let nextButtons = document.querySelectorAll('.nextButton');
+        nextButtons.forEach(nextButton => {
+            nextButton.addEventListener("click", ev => {
+                nextButton.classList.add('pulse')
+                setTimeout(function() {
+                    nextButton.classList.remove('pulse')
+                }, 500);
+            })
         })
 
 
-        let box1 = document.getElementById('box1');
-        let box2 = document.getElementById('box2');
-        let box3 = document.getElementById('box3');
-
+        let elementsToShowOnScroll = document.querySelectorAll('.on-scroll-visibility');
         window.onscroll = function () {
-            if (document.documentElement.scrollTop > box1.getBoundingClientRect().top) {
-                box1.style.opacity = '1';
-            }
-            if (document.documentElement.scrollTop > box2.getBoundingClientRect().top) {
-                box2.style.opacity = '1';
-            }
-            if (document.documentElement.scrollTop > box3.getBoundingClientRect().top) {
-                box3.style.opacity = '1';
-            }
+            elementsToShowOnScroll.forEach(element => {
+                console.log(element.getBoundingClientRect(), document.documentElement.scrollTop)
+                if (document.documentElement.scrollTop > element.getBoundingClientRect().top) {
+                    element.style.opacity = '1';
+                }
+            })
+        }
+
+        function goToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth', block: 'start'});
         }
     </script>
 {% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Outreach Digital | {{ context.title }}{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('/assets/styles/home.css') }}" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('/assets/scripts/home.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    {% include 'general/header.html.twig' %}
+    <div class="individuals-container">
+        <h3 class="individuals-title">{{ context.title }}</h3>
+        <p class="individuals-p">{{ context.body1 }}</p>
+    </div>
+
+    <div class="individuals-container">
+        <img class="individuals-image" src="{{ asset('/assets/img/individuals/'~context.originalKey~'.png') }}">
+    </div>
+
+    <div class="individuals-container">
+        <p class="individuals-p">{{ context.body2 }}</p>
+    </div>
+
+    {% include 'general/footer.html.twig' %}
+{% endblock %}

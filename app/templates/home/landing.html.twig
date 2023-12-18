@@ -3,48 +3,15 @@
 {% block title %}Outreach Digital{% endblock %}
 
 {% block stylesheets %}
-    <link href="/assets/styles/home.css" rel="stylesheet">
+    <link href="{{ asset('/assets/styles/home.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('/assets/scripts/home.js') }}"></script>
 {% endblock %}
 
 {% block body %}
-    <div class="header" id="header">
-        <div class="logo-container">
-            <img src="{{ asset('assets/img/logo_trans.png') }}" class="logo">
-        </div>
-        <div class="menu-container">
-            <div class="menu-item" onclick="goToSection('header')">Acasa</div>
-            <div class="menu-item" onclick="goToSection('whyUs')">Cine suntem</div>
-            <div class="menu-item" onclick="goToSection('services')">Servicii</div>
-            <div class="menu-item" onclick="goToSection('contact')">Contact</div>
-        </div>
-    </div>
-
-    <div class="wave-container">
-        <!--Content before waves-->
-        <div class="inner-header flex" style="visibility: hidden">
-            <h1>Digital Outreach</h1>
-        </div>
-        <!--Waves Container-->
-        <div>
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave"
-                          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="#4C74FC"/>
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="#4C74FC"/>
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="#AEAEE6"/>
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#EEEDFF"/>
-                </g>
-            </svg>
-        </div>
-        <!--Waves end-->
-
-    </div>
-    <!--Header ends-->
-
+    {% include 'general/header.html.twig' %}
     <div class="sections-container" style="margin-top: -2em">
         <div class="heading-section" style="margin-top: 0.5rem;">
             <h1>Imbinam viziunea cu strategia pentru un succes garantat!</h1>
@@ -128,19 +95,19 @@
                 aspiratiile dumneavoastra sunt inspiratia noastra!
             </div>
             <div class="services-card-line-wrapper">
-                <div class="services-card on-scroll-visibility">Branding / Rebranding</div>
-                <div class="services-card on-scroll-visibility">Strategie Digitala</div>
-                <div class="services-card on-scroll-visibility">Web Design</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'branding_rebranding'}) }}')" class="services-card on-scroll-visibility">Branding / Rebranding</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'strategie_digitala'}) }}')" class="services-card on-scroll-visibility">Strategie Digitala</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'web_design'}) }}')" class="services-card on-scroll-visibility">Web Design</div>
             </div>
             <div class="services-card-line-wrapper">
-                <div class="services-card on-scroll-visibility">Google / YouTube ADS</div>
-                <div class="services-card on-scroll-visibility">Facebook ADS</div>
-                <div class="services-card on-scroll-visibility">Social Media Marketing</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'campanii_ppc'}) }}')" class="services-card on-scroll-visibility">Google / YouTube ADS</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'campanii_ppc'}) }}')" class="services-card on-scroll-visibility">Facebook ADS</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'social_media_management'}) }}')" class="services-card on-scroll-visibility">Social Media Marketing</div>
             </div>
             <div class="services-card-line-wrapper">
-                <div class="services-card on-scroll-visibility">Search Engine Optimizations</div>
-                <div class="services-card on-scroll-visibility">Copyrighting</div>
-                <div class="services-card on-scroll-visibility">Promotionale</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'optimizare_seo'}) }}')" class="services-card on-scroll-visibility">Search Engine Optimizations</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'copywriting'}) }}')" class="services-card on-scroll-visibility">Copyrighting</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'materiale_promotionale'}) }}')" class="services-card on-scroll-visibility">Promotionale</div>
             </div>
 
             <div class="section" style="margin-top: 10rem;">
@@ -231,7 +198,8 @@
                 ex ea commodo consequat.
             </div>
 
-            <form class="contact-form row">
+            <form id="landingContactForm" class="contact-form row" method="POST">
+                <input id="entries" name="entries" type="hidden">
                 <div class="form-field col x-50">
                     <input id="firstName" name="firstName" class="input-text js-input" type="text" required>
                     <label class="label" for="firstName">Nume</label>
@@ -249,7 +217,7 @@
                     <label class="label" for="phone">Telefon</label>
                 </div>
                 <div class="form-field col x-100">
-                    <textarea id="message" class="input-text js-input" type="text" required></textarea>
+                    <textarea id="message" name="message" class="input-text js-input" type="text" required></textarea>
                     <label class="label" for="message">Message</label>
                 </div>
                 <div class="form-field col x-100 align-center">
@@ -258,33 +226,7 @@
             </form>
         </div>
 
-        <div class="generic-section">
-            <div style="width: 75%; display: flex; justify-content: space-between;">
-                <h3 class="text-small" style="font-size: 20px; color: rgba(76,116,252,0.75);">
-                    Email:
-                    <b style="color: #4C74FC">
-                        <a href="mailto:contact@outreachdigital.ro" style="color: inherit; text-decoration: none;">
-                            contact@outreachdigital.ro
-                        </a>
-                    </b>
-                </h3>
-                <h3 class="text-small" style="font-size: 20px; color: rgba(76,116,252,0.75);">
-                    Telefon:
-                    <b style="color: #4C74FC">
-                        <a href="tel:+40745146116" style="color: inherit; text-decoration: none;">
-                            +40 745 146 116
-                        </a>
-                    </b>
-                </h3>
-                <h3 class="text-small" style="font-size: 20px; color: rgba(76,116,252,0.75);">
-                    Adresa: <b style="color: #4C74FC">Brasov, Str. Dealului nr. 12</b>
-                </h3>
-            </div>
-        </div>
-
-        <div class="footer">
-            ©2023 Toate drepturile rezervate |<b style="color: white">&nbsp;OUTREACH DIGITAL ROMANIA</b>
-        </div>
+        {% include 'general/footer.html.twig' %}
     </div>
 
     <script>
@@ -305,10 +247,6 @@
                     element.style.opacity = '1';
                 }
             })
-        }
-
-        function goToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({behavior: 'smooth', block: 'start'});
         }
 
         document.querySelectorAll('.js-input').forEach(input => {

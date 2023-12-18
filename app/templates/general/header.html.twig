@@ -1,0 +1,49 @@
+<div class="header" id="header">
+    <div class="logo-container">
+        <img src="{{ asset('assets/img/logo_trans.png') }}" class="logo" onclick="window.location.href='{{ path('landing') }}'">
+    </div>
+    <div class="menu-container">
+        <div class="menu-item" onclick="goToSection('header')">Acasa</div>
+        <div class="menu-item" onclick="goToSection('whyUs')">Cine suntem</div>
+        <div id="servicesDropdownTrigger" class="menu-item"><div onclick="goToSection('services')">Servicii</div>
+            <div class="services-dropdown">
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'branding_rebranding'}) }}')" class="services-dropdown-item">Branding / Rebranding</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'strategie_digitala'}) }}')" class="services-dropdown-item">Strategie Digitala</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'web_design'}) }}')" class="services-dropdown-item">Web Design</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'campanii_ppc'}) }}')" class="services-dropdown-item">Google / YouTube ADS</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'campanii_ppc'}) }}')" class="services-dropdown-item">Facebook ADS</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'social_media_management'}) }}')" class="services-dropdown-item">Social Media Marketing</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'optimizare_seo'}) }}')" class="services-dropdown-item">Search Engine Optimizations</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'copywriting'}) }}')" class="services-dropdown-item">Copyrighting</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'materiale_promotionale'}) }}')" class="services-dropdown-item">Promotionale</div>
+            </div>
+        </div>
+        <div class="menu-item" onclick="goToSection('contact')">Contact</div>
+    </div>
+</div>
+
+<div class="wave-container">
+    <!--Content before waves-->
+    <div class="inner-header flex" style="visibility: hidden">
+        <h1>Digital Outreach</h1>
+    </div>
+    <!--Waves Container-->
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave"
+                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="#4C74FC"/>
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="#4C74FC"/>
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="#AEAEE6"/>
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#EEEDFF"/>
+            </g>
+        </svg>
+    </div>
+    <!--Waves end-->
+
+</div>
+<!--Header ends-->

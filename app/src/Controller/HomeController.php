@@ -42,7 +42,7 @@ class HomeController extends AbstractController
                 'buttonLink' => null,
                 'sender' => 'Outreach Digital',
             ]);
-        $loader = new FilesystemLoader('templates', '/app');
+        $loader = new FilesystemLoader('templates', '../');
         $twigEnv = new Environment($loader);
         $twigBodyRenderer = new BodyRenderer($twigEnv);
         $twigBodyRenderer->render($email);
@@ -63,7 +63,7 @@ class HomeController extends AbstractController
                 'buttonLink' => null,
                 'sender' => 'Outreach Digital',
             ]);
-        $loader = new FilesystemLoader('templates', '/app');
+        $loader = new FilesystemLoader('templates', '../');
         $twigEnv = new Environment($loader);
         $twigBodyRenderer = new BodyRenderer($twigEnv);
         $twigBodyRenderer->render($email);

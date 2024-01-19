@@ -16,6 +16,11 @@ for (let i = 0; i < localStorage.length; i++){
         }
     }
 }
+if (localStorage.getItem('source') === null) {
+    entries += 'Contact de pe pagina "landing"'
+} else {
+    entries += 'Contact de pe pagina "'+localStorage.getItem('source')+'".'
+}
 window.onload = function WindowLoad(event) {
     if (document.getElementById('entries') !== null) {
         document.getElementById('entries').value = entries
@@ -30,4 +35,13 @@ function goToSection(sectionId) {
 }
 function redirectToRoute(route) {
     window.location.href = route
+}
+
+function openInNewTab(url) {
+    window.open(url, '_blank')
+}
+
+function markCurrentPageAsSource() {
+    localStorage.setItem('source', url.substring(route + 1))
+    redirectToRoute('/#contact')
 }

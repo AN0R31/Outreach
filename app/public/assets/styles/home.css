@@ -14,8 +14,6 @@ html, body {
 }
 
 .header {
-    /*background-color: #4C74FC;*/
-    background-color: #4C74FC !important;
     width: 100%;
     height: 10%;
     /*border: 1px solid black;*/
@@ -23,7 +21,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 10;
+    z-index: 1;
 }
 
 .logo-container {
@@ -316,7 +314,7 @@ li {
 
 .individuals-title {
     color: #4C74FC;
-    font-size: 40px;
+    font-size: 55px;
     font-weight: 600;
     text-align: center;
 }
@@ -325,12 +323,20 @@ li {
     color: black;
     font-size: 24px;
     font-weight: 400;
-    width: 75%;
+    width: 50%;
     text-align: justify;
+    line-height: 1.75em;
 }
 
 .individuals-image {
     width: 15%;
+}
+
+.individuals-info-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .services-dropdown {
@@ -340,6 +346,7 @@ li {
     position: absolute;
     margin-left: -5em;
     z-index: 999;
+    border: 1px solid #4C74FC;
 }
 
 .services-dropdown-item {
@@ -566,10 +573,10 @@ p {
 .waves {
     position:relative;
     width: 100%;
-    height:15vh;
+    height: 15vh;
     margin-bottom:-7px; /*Fix for safari gap*/
-    min-height:100px;
-    max-height:150px;
+    min-height:150px;
+    max-height:200px;
 }
 
 /* Animation */
@@ -630,6 +637,29 @@ p {
     justify-content: space-between;
 }
 
+.goto-contact-button {
+    width: fit-content;
+    height: fit-content;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background-color: white;
+    color: #4C74FC;
+    cursor: pointer;
+}
+
+.plan-box {
+    width: 20%;
+    height: fit-content;
+    padding: 15px 30px;
+    background-color: #4C74FC;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
 @media only screen and (max-width: 767px) {
     body, html {
         overflow-x: hidden!important;
@@ -666,6 +696,12 @@ p {
         font-size: 14px;
         text-align: center;
     }
+    .plan-box {
+        width: 65%;
+    }
+    .plan-box-item {
+        font-size: 1em!important;
+    }
     .general-svg {
         width: 2.5em;
     }
@@ -679,7 +715,7 @@ p {
         margin-top: 2em !important;
     }
     .generic-section h1 {
-        font-size: 18px;
+        font-size: 24px;
         margin: 0;
     }
     ul {
@@ -738,13 +774,14 @@ p {
     }
 
     .individuals-title {
-        font-size: 18px!important;
+        font-size: 28px!important;
     }
     .individuals-p {
         font-size: 12px!important;
+        width: 80%;
     }
-    .individuals-image {
-        width: 60%;
+    .individuals-info-container {
+        flex-direction: column-reverse;
     }
     #servicesDropdownTrigger:hover {
         .services-dropdown {

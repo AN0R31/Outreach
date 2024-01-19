@@ -1,0 +1,11 @@
+(X) 1. LOGO -> adaugat "digital" sub + centrat
+(X) 2. Pe click contact din produs -> se trimite si de pe care a contactat (+ de reintegrat chenarul/plan)
+(X) 3. Ce pula mea are wave ala
+(X) 4. Restu de poze la individuale
+(X) 5. "De ce marketing digital" intre landing si "De ce noi"
+(-) 6. Sters 'random' + sageata => Mai aruncam un ochi, poate o regandim sa se potriveasca
+( ) 7. Diacritice
+(X) 8. Footer goto Google maps
+
+Bugs:
+(X) 1. Header links not working from individuals

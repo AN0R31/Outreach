@@ -19,16 +19,35 @@
     {% include 'general/header.html.twig' %}
     <div class="individuals-container">
         <h3 class="individuals-title">{{ context.title }}</h3>
-        <p class="individuals-p">{{ context.body1 }}</p>
+        <div class="individuals-info-container">
+            <p class="individuals-p">{{ context.body1 }}{{ context.body2 }}</p>
+            <div style="width: 30%;">
+                <img style="width: 100%;" src="{{ asset('/assets/img/individuals/'~context.originalKey~'.png') }}">
+            </div>
+        </div>
     </div>
 
-    <div class="individuals-container">
-        <img class="individuals-image" src="{{ asset('/assets/img/individuals/'~context.originalKey~'.png') }}">
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <div class="plan-box">
+            <h4 style="color: white; font-size: 2.5em; margin: 0 0 40px 0;">Servicii</h4>
+
+            <div style="width: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                {% for item in context.attributes %}
+                    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; color: white; margin: 0 0 30px 0;">
+                        <h4 class="plan-box-item" style="color: white; font-size: 1.25em; margin: 0;">{{ item }}</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" style="width: 30px; height: 30px;">
+                            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <h4 style="color: white; font-size: 2.5em; margin: 20px 0 20px 0;">{{ context.price }} {{ context.unit }}</h4>
+
+            <div class="goto-contact-button" onclick="markCurrentPageAsSource()">Contacteaza-ne!</div>
+        </div>
     </div>
 
-    <div class="individuals-container">
-        <p class="individuals-p">{{ context.body2 }}</p>
-    </div>
 
     {% include 'general/footer.html.twig' %}
 {% endblock %}

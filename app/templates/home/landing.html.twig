@@ -34,8 +34,55 @@
             <div class="text-cta">Incepe turul online!</div>
         </div>
         <div class="section" style="margin-top: 0.5rem;">
-            <img onclick="goToSection('whyUs')" src="{{ asset('assets/svg/down-arrow-in-circle.svg') }}"
+            <img onclick="goToSection('comparison')" src="{{ asset('assets/svg/down-arrow-in-circle.svg') }}"
                  class="general-svg nextButton">
+        </div>
+
+        <div id="comparison" class="generic-section">
+            <h1>De ce marketing digital?</h1>
+            <div class="text-small small-text-mobile" style="font-size: 24px; width: 80%;">
+                <b style="color: #4C74FC;">Măsurabilitate și analiză mai precisă:</b> Marketingul digital oferă
+                instrumente avansate de analiză și măsurare a rezultatelor campaniilor. Poți urmări în timp real
+                performanța campaniilor tale și să ajustezi strategia în funcție de datele colectate.
+            </div>
+            <div class="text-small small-text-mobile" style="font-size: 24px; width: 80%; margin-top: 25px;">
+                <b style="color: #4C74FC;">Targetare precisă:</b> Cu marketingul digital, poți să-ți îndrepți eforturile
+                către un public specific. Platformele online permit segmentarea precisă a audienței, astfel încât
+                mesajul tău să ajungă la cei mai potriviți potențiali clienți.
+            </div>
+            <div class="text-small small-text-mobile" style="font-size: 24px; width: 80%; margin-top: 25px;">
+                <b style="color: #4C74FC;">Costuri mai mici:</b> În general, costurile asociate cu marketingul digital
+                pot fi mai mici decât cele ale marketingului tradițional. Poți începe cu bugete mai mici și să ajustezi
+                în funcție de performanță.
+            </div>
+            <div class="text-small small-text-mobile" style="font-size: 24px; width: 80%; margin-top: 25px;">
+                <b style="color: #4C74FC;">Interacțiune directă cu publicul:</b> Marketingul digital facilitează
+                interacțiunea directă cu publicul. Prin intermediul rețelelor sociale, e-mailurilor, blogurilor și altor
+                canale online, poți să comunici direct cu clienții tăi și să primești feedback în timp real.
+            </div>
+            <div class="text-small small-text-mobile" style="font-size: 24px; width: 80%; margin-top: 25px;">
+                <b style="color: #4C74FC;">Flexibilitate și adaptabilitate:</b> În mediul digital, poți ajusta rapid și
+                ușor strategiile și mesajele de marketing în funcție de schimbările în comportamentul consumatorilor sau
+                în piață. Acest nivel de flexibilitate poate fi dificil de atins în marketingul tradițional.
+            </div>
+            <div class="text-small small-text-mobile" style="font-size: 24px; width: 80%; margin-top: 25px;">
+                <b style="color: #4C74FC;">Globalizare și extindere rapidă:</b> Marketingul digital facilitează accesul
+                la piețe globale. Poți să-ți extinzi afacerea către noi teritorii fără costuri semnificative, în
+                comparație cu marketingul tradițional.
+            </div>
+            <div class="text-small small-text-mobile" style="font-size: 24px; width: 80%; margin-top: 25px;">
+                <b style="color: #4C74FC;">Credibilitate și recunoaștere a brandului:</b> O prezență solidă pe internet,
+                prin intermediul unui site web profesionist, a rețelelor sociale și a altor canale digitale, poate
+                contribui la creșterea credibilității și recunoașterii brandului tău.
+            </div>
+
+            <div class="section remove-top-mobile-half">
+                <div class="text-cta">De ce noi?</div>
+            </div>
+            <div class="section" style="margin-top: 0.5rem;">
+                <img onclick="goToSection('whyUs')" src="{{ asset('assets/svg/down-arrow-in-circle.svg') }}"
+                     class="general-svg nextButton">
+            </div>
         </div>
 
         <div id="whyUs" class="generic-section">
@@ -95,19 +142,37 @@
                 aspiratiile dumneavoastra sunt inspiratia noastra!
             </div>
             <div class="services-card-line-wrapper">
-                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'branding_rebranding'}) }}')" class="services-card on-scroll-visibility">Branding / Rebranding</div>
-                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'strategie_digitala'}) }}')" class="services-card on-scroll-visibility">Strategie Digitala</div>
-                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'web_design'}) }}')" class="services-card on-scroll-visibility">Web Design</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'branding_rebranding'}) }}')"
+                     class="services-card on-scroll-visibility">Branding / Rebranding
+                </div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'strategie_digitala'}) }}')"
+                     class="services-card on-scroll-visibility">Strategie Digitala
+                </div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'web_design'}) }}')"
+                     class="services-card on-scroll-visibility">Web Design
+                </div>
             </div>
             <div class="services-card-line-wrapper">
-                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'campanii_ppc'}) }}')" class="services-card on-scroll-visibility">Google / YouTube ADS</div>
-                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'campanii_ppc'}) }}')" class="services-card on-scroll-visibility">Facebook ADS</div>
-                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'social_media_management'}) }}')" class="services-card on-scroll-visibility">Social Media Marketing</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'campanii_ppc'}) }}')"
+                     class="services-card on-scroll-visibility">Google / YouTube ADS
+                </div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'campanii_ppc'}) }}')"
+                     class="services-card on-scroll-visibility">Facebook ADS
+                </div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'social_media_management'}) }}')"
+                     class="services-card on-scroll-visibility">Social Media Marketing
+                </div>
             </div>
             <div class="services-card-line-wrapper">
-                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'optimizare_seo'}) }}')" class="services-card on-scroll-visibility">Search Engine Optimizations</div>
-                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'copywriting'}) }}')" class="services-card on-scroll-visibility">Copyrighting</div>
-                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'materiale_promotionale'}) }}')" class="services-card on-scroll-visibility">Promotionale</div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'optimizare_seo'}) }}')"
+                     class="services-card on-scroll-visibility">Search Engine Optimizations
+                </div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'copywriting'}) }}')"
+                     class="services-card on-scroll-visibility">Copyrighting
+                </div>
+                <div onclick="redirectToRoute('{{ path('individuals', {'key' : 'materiale_promotionale'}) }}')"
+                     class="services-card on-scroll-visibility">Promotionale
+                </div>
             </div>
 
             <div class="section remove-top-mobile-half" style="margin-top: 10rem;">
@@ -192,11 +257,11 @@
         <div id="contact" class="generic-section">
             <h1>Hai sa ne auzim!</h1>
 
-            <div class="text-small small-text-mobile" style="font-size: 20px; width: 70%; margin-top: 30px;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-            </div>
+            {#            <div class="text-small small-text-mobile" style="font-size: 20px; width: 70%; margin-top: 30px;"> #}
+            {#                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et #}
+            {#                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip #}
+            {#                ex ea commodo consequat. #}
+            {#            </div> #}
 
             <form id="landingContactForm" class="contact-form row" method="POST">
                 <input id="entries" name="entries" type="hidden">

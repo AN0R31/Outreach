@@ -98,7 +98,7 @@ class HomeController extends AbstractController
             ],
             'strategie_digitala' => [
                 'originalKey' => 'strategie_digitala',
-                'title' => 'Strategie Digitala',
+                'title' => 'Strategie Digitală',
                 'body1' => 'O strategie digitală este un plan de acțiune bine gândit care utilizează mediul online pentru a atinge obiectivele unei afaceri sau organizații. Aceasta implică definirea clară a publicului țintă, a obiectivelor specifice, a canalelor de marketing digital potrivite și a mesajelor cheie. O strategie digitală eficientă cuprinde planuri detaliate pentru optimizarea site-ului web, gestionarea conținutului, promovarea pe rețelele sociale, publicitatea online și analiza rezultatelor.',
                 'body2' => 'Ea asigură coerența în comunicarea cu audiența și permite o adaptare flexibilă în funcție de schimbările din mediul digital. O strategie digitală bine pusă la punct poate ajuta o afacere să crească vizibilitatea online, să atragă și să convertească clienți, și să se adapteze cu succes la evoluțiile tehnologice și schimbările în comportamentul consumatorilor.',
                 'attributes' => ['Analiza pieței', 'Stabilirea publicului cheie', 'Analiza demografică', 'Alegerea canalului de marketing', 'Alegerea mesajelor cheie'],
@@ -152,12 +152,12 @@ class HomeController extends AbstractController
             ],
             'materiale_promotionale' => [
                 'originalKey' => 'materiale_promotionale',
-                'title' => 'Materiale Promotionale',
+                'title' => 'Materiale Promoționale',
                 'body1' => 'Materialele promotionale reprezintă instrumente esențiale în strategiile de marketing și branding ale unei afaceri. Acestea includ o gamă variată de obiecte precum tricouri personalizate, pixuri cu logo, broșuri, căni, magneti de frigider și multe altele, fiecare personalizate cu identitatea vizuală a companiei.',
-                'body2' => 'Aceste materiale nu numai că oferă o modalitate tangibilă de a-și promova brandul, dar pot și să servească ca amintiri utile pentru clienți și parteneri. Materialele promotionale sunt versatile și pot fi folosite în diverse contexte, de la evenimente corporative și târguri, până la campanii de marketing direct și cadouri de afaceri. Ele contribuie la consolidarea memorabilității brandului și la creșterea loialității clienților, oferind în același timp oportunități de promovare la nivel larg.',
+                'body2' => 'Aceste materiale nu numai că oferă o modalitate tangibilă de a-și promova brandul, dar pot și să servească ca amintiri utile pentru clienți și parteneri. Materialele promoționale sunt versatile și pot fi folosite în diverse contexte, de la evenimente corporative și târguri, până la campanii de marketing direct și cadouri de afaceri. Ele contribuie la consolidarea memorabilității brandului și la creșterea loialității clienților, oferind în același timp oportunități de promovare la nivel larg.',
                 'attributes' => ['Tricouri, Șepci, Geci, Pantaloni', 'Bannere', 'Servicii de broderie',' Tablouri', 'Articole Sublimabile'],
                 'price' => '30',
-                'unit' => 'RON/Bucata',
+                'unit' => 'RON/Bucată',
             ],
         ];
 

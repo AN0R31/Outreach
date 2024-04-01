@@ -13,7 +13,7 @@ Bugs:
 
 ------------------------------------------------------SESSION 2
 ( ) 1. Wave are ceva gaura sus pe mobile
-( ) 2. Diacritice
+(X) 2. Diacritice
 ( ) 3. De terminat pachete la individuale
 ( ) 4. "De ce marketing..." -> vezi cu poza ce poti sa-i faci
 ( ) 5. "Random" -> adauga + (https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/308502297_599992418169514_1197029775355162881_n.png?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=CTShjDtcxJYAX9if-3e&_nc_ht=scontent-ams2-1.xx&oh=00_AfA9QUjpS2dTGDwG2ujB-j1tBU9U3cI0Lod13sF_-roPcA&oe=65DABC82)

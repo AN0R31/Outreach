@@ -266,12 +266,12 @@
             <form id="landingContactForm" class="contact-form row" method="POST">
                 <input id="entries" name="entries" type="hidden">
                 <div class="form-field col x-50">
-                    <input id="firstName" name="firstName" class="input-text js-input" type="text" required>
-                    <label class="label" for="firstName">Nume</label>
+                    <input id="lastName" name="lastName" class="input-text js-input" type="text" required>
+                    <label class="label" for="lastName">Nume</label>
                 </div>
                 <div class="form-field col x-50">
-                    <input id="lastName" name="lastName" class="input-text js-input" type="text" required>
-                    <label class="label" for="lastName">Prenume</label>
+                    <input id="firstName" name="firstName" class="input-text js-input" type="text" required>
+                    <label class="label" for="firstName">Prenume</label>
                 </div>
                 <div class="form-field col x-50">
                     <input id="email" name="email" class="input-text js-input" type="email" required>
@@ -295,6 +295,24 @@
     </div>
 
     <script>
+        {% if error is defined %}
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: '{{ error }}',
+                confirmationButtonColor: '#4C74FC'
+            })
+        {% else %}
+            {% if source is defined and source == 'contact' %}
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Multumim de contact!',
+                    text: 'Mesajul tau a fost trimis cu succes! Vom reveni in cel mai scurt timp posibil!',
+                    confirmationButtonColor: '#4C74FC'
+                })
+            {% endif %}
+        {% endif %}
+
         let nextButtons = document.querySelectorAll('.nextButton');
         nextButtons.forEach(nextButton => {
             nextButton.addEventListener("click", ev => {

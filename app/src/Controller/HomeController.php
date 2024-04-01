@@ -27,49 +27,60 @@ class HomeController extends AbstractController
     #[Route(path: "/", methods: ['POST'])]
     public function landingPost(Request $request): Response
     {
-        $mailer = new Mailer(Transport::fromDsn($_ENV['SMTP_DNS']));
-        $email = (new TemplatedEmail())
-            ->from(new Address('jsms@scriptyre.com', 'Outreach Digital'))
-            ->to('hello@outreachdigital.ro')
-            ->priority(Email::PRIORITY_HIGH)
-            ->subject('Un nou potențial client!')
-            ->htmlTemplate('email/generic.html.twig')
-            ->context([
-                'name' => 'Vladones',
-                'message' => 'Cineva încearcă să te contacteze de pe outreachdigital.ro. '.$request->request->get('entries').' Mai jos găsești detaliile de contact:',
-                'additionalInfo' => $request->request->get('firstName').' '.$request->request->get('lastName').', '.$request->request->get('email').', '.$request->request->get('phone').', mesaj: '.$request->request->get('message'),
-                'buttonText' => null,
-                'buttonLink' => null,
-                'sender' => 'Outreach Digital',
-            ]);
-        $loader = new FilesystemLoader('templates', '../');
-        $twigEnv = new Environment($loader);
-        $twigBodyRenderer = new BodyRenderer($twigEnv);
-        $twigBodyRenderer->render($email);
-        $mailer->send($email);
+        try {
+            $mailer = new Mailer(Transport::fromDsn($_ENV['SMTP_DNS']));
+            $email = (new TemplatedEmail())
+                ->from(new Address('jsms@scriptyre.com', 'Outreach Digital'))
+                ->to('hello@outreachdigital.ro')
+                ->priority(Email::PRIORITY_HIGH)
+                ->subject('Un nou potențial client!')
+                ->htmlTemplate('email/generic.html.twig')
+                ->context([
+                    'name' => 'Vladones',
+                    'message' => 'Cineva încearcă să te contacteze de pe outreachdigital.ro. '.$request->request->get('entries').' Mai jos găsești detaliile de contact:',
+                    'additionalInfo' => $request->request->get('firstName').' '.$request->request->get('lastName').', '.$request->request->get('email').', '.$request->request->get('phone').', mesaj: '.$request->request->get('message'),
+                    'buttonText' => null,
+                    'buttonLink' => null,
+                    'sender' => 'Outreach Digital',
+                ]);
+            $loader = new FilesystemLoader('templates', '../');
+            $twigEnv = new Environment($loader);
+            $twigBodyRenderer = new BodyRenderer($twigEnv);
+            $twigBodyRenderer->render($email);
+            $mailer->send($email);
 
-        $mailer = new Mailer(Transport::fromDsn($_ENV['SMTP_DNS']));
-        $email = (new TemplatedEmail())
-            ->from(new Address('jsms@scriptyre.com', 'Outreach Digital'))
-            ->to($request->request->get('email'))
-            ->priority(Email::PRIORITY_HIGH)
-            ->subject('Mulțumim de vizită!')
-            ->htmlTemplate('email/generic.html.twig')
-            ->context([
-                'name' => $request->request->get('lastName'),
-                'message' => 'Îți mulțumim pentru interes, și abia așteptăm să ne cunoaștem mai bine!',
-                'additionalInfo' => 'Am primit datele tale cu succes, și te vom contacta în curând!',
-                'buttonText' => null,
-                'buttonLink' => null,
-                'sender' => 'Outreach Digital',
+            $mailer = new Mailer(Transport::fromDsn($_ENV['SMTP_DNS']));
+            $email = (new TemplatedEmail())
+                ->from(new Address('jsms@scriptyre.com', 'Outreach Digital'))
+                ->to($request->request->get('email'))
+                ->priority(Email::PRIORITY_HIGH)
+                ->subject('Mulțumim de vizită!')
+                ->htmlTemplate('email/generic.html.twig')
+                ->context([
+                    'name' => $request->request->get('firstName'),
+                    'message' => 'Îți mulțumim pentru interes, și abia așteptăm să ne cunoaștem mai bine!',
+                    'additionalInfo' => 'Am primit datele tale cu succes, și te vom contacta în curând!',
+                    'buttonText' => null,
+                    'buttonLink' => null,
+                    'sender' => 'Outreach Digital',
+                ]);
+            $loader = new FilesystemLoader('templates', '../');
+            $twigEnv = new Environment($loader);
+            $twigBodyRenderer = new BodyRenderer($twigEnv);
+            $twigBodyRenderer->render($email);
+            $mailer->send($email);
+        } catch (\Exception $e) {
+            return $this->render('home/landing.html.twig', [
+                'source' => 'contact',
+                'status' => false,
+                'error' => 'A apărut o eroare la trimiterea mesajului. Vă rugăm să încercați din nou mai târziu.',
             ]);
-        $loader = new FilesystemLoader('templates', '../');
-        $twigEnv = new Environment($loader);
-        $twigBodyRenderer = new BodyRenderer($twigEnv);
-        $twigBodyRenderer->render($email);
-        $mailer->send($email);
+        }
 
-        return $this->render('home/landing.html.twig', []);
+        return $this->render('home/landing.html.twig', [
+            'source' => 'contact',
+            'status' => true,
+        ]);
     }
 
     #[Route(path: "/individuals/{key}", name: "individuals", methods: ['GET'])]

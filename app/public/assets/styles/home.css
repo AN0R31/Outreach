@@ -667,6 +667,8 @@ p {
         overflow-x: hidden!important;
     }
     .header {
+        background-color: #4C74FC;
+        height: 20%;
         flex-direction: column;
         justify-content: center;
         align-items: center;

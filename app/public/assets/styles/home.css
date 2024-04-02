@@ -319,11 +319,14 @@ li {
     font-size: 55px;
     font-weight: 600;
     text-align: center;
+    margin-top: 14px;
 }
 
 .individuals-p {
-    color: black;
-    font-size: 24px;
+    /*color: black;*/
+    color: #3b82f6;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1), 0 0 1em rgba(59, 130, 246, 0.25), 0 0 0.2em rgba(59, 130, 246, 0.25);
+    font-size: 22px;
     font-weight: 400;
     width: 50%;
     text-align: justify;
@@ -668,7 +671,7 @@ p {
     }
     .header {
         background-color: #4C74FC;
-        height: 20%;
+        height: 15%;
         flex-direction: column;
         justify-content: center;
         align-items: center;

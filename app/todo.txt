@@ -14,7 +14,16 @@ Bugs:
 ------------------------------------------------------SESSION 2
 (X) 1. Wave are ceva gaura sus pe mobile
 (X) 2. Diacritice
-(?) 3. De terminat pachete la individuale [Ne trebuie datele]
+(?) 3. De terminat pachete la individuale [Ne trebuie datele] | branding_rebranding, copywriting
 (X) 4. "De ce marketing..." -> vezi cu poza ce poti sa-i faci [REMOVED IMAGE]
 (X) 5. "Random" -> adauga + (https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/308502297_599992418169514_1197029775355162881_n.png?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=CTShjDtcxJYAX9if-3e&_nc_ht=scontent-ams2-1.xx&oh=00_AfA9QUjpS2dTGDwG2ujB-j1tBU9U3cI0Lod13sF_-roPcA&oe=65DABC82)
 (X) 6. Contact -> User confirmation on page
+
+------------------------------------------------------SESSION 3
+( ) 1. Individuale -> switch intre detalii si pret, nu scross in jos (see pricing action)
+( ) 2. SEO [la sfarsit de tot]
+( ) 3. Brands -> mai mari pe mobile
+( ) 4. Metodologie -> refacut walkthrough bar
+( ) 5. Sweetalert fute ceva styling
+( ) 6. Individuale pe mobile -> mici ajustari
+

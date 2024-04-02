@@ -92,8 +92,8 @@ class HomeController extends AbstractController
                 'title' => 'Branding / Rebranding',
                 'body1' => 'Brandingul și rebrandingul sunt procese esențiale pentru construirea și consolidarea identității unei afaceri. Brandul este cartea de vizită a companiei, reprezentând reputația, valorile și promisiunile acesteia. În cazul rebrandingului, acesta poate fi văzut ca o oportunitate de a revigora și de a revitaliza imaginea și mesajul companiei pentru a se adapta schimbărilor din piață sau pentru a reflecta noi direcții strategice.',
                 'body2' => 'Este momentul în care se pot lua decizii importante cu privire la logo, culori, sloganuri și mesaje pentru a transmite o imagine proaspătă și actuală publicului țintă. Indiferent dacă sunteți la început de drum sau decideți să vă reinventați, brandingul și rebrandingul sunt instrumente puternice pentru a vă diferenția și a vă conecta mai bine cu clienții.',
-                'attributes' => ['Test1', 'Test2'],
-                'price' => 'X',
+                'attributes' => ['Naming', 'Logo Design', 'Identitate vizuală'],
+                'price' => '300',
                 'unit' => 'RON',
             ],
             'strategie_digitala' => [
@@ -146,9 +146,9 @@ class HomeController extends AbstractController
                 'title' => 'Copywriting',
                 'body1' => 'Copywritingul este arta și știința de a crea conținut scris persuasiv și captivant, cu scopul de a influența cititorii să ia acțiuni specifice, cum ar fi cumpărarea unui produs, completarea unui formular sau înscrierea într-o listă de e-mailuri.',
                 'body2' => 'Copywritingul eficient este esențial în publicitate, marketing și comunicare în mediul online și offline, contribuind la succesul campaniilor și la construirea convingătoare a mesajelor de brand.',
-                'attributes' => ['Test1', 'Test2'],
-                'price' => 'X',
-                'unit' => 'RON',
+                'attributes' => ['Alegerea tematicii conținutului', 'Research', 'Conținut unic'],
+                'price' => '30',
+                'unit' => 'RON/200 cuvinte',
             ],
             'materiale_promotionale' => [
                 'originalKey' => 'materiale_promotionale',

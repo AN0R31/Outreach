@@ -349,7 +349,12 @@
             confirmationButtonColor: '#4C74FC',
             scrollbarPadding: false,
             heightAuto: false,
+        }).then(() => {
+            window.location.href = '{{ path('landing') }}';
         })
+        {% endif %}
+
+        {% if success is defined %}
         {% else %}
         {% if source is defined and source == 'contact' %}
         Swal.fire({
@@ -359,6 +364,8 @@
             confirmationButtonColor: '#4C74FC',
             scrollbarPadding: false,
             heightAuto: false,
+        }).then(() => {
+            window.location.href = '{{ path('landing') }}';
         })
         {% endif %}
         {% endif %}

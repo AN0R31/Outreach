@@ -926,7 +926,7 @@ p {
         height: fit-content;
     }
     .go-to-top-on-mobile {
-        margin-top: -110vh !important;
+        margin-top: -65vh !important;
     }
     .logo-collaborators {
         width: 35%;

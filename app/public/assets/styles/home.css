@@ -825,14 +825,14 @@ p {
 .cookie-consent-banner__header {
     margin-bottom: 8px;
 
-    font-family: "CeraPRO-Bold", sans-serif, arial;
+    /*font-family: "CeraPRO-Bold", sans-serif, arial;*/
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
 }
 
 .cookie-consent-banner__description {
-    font-family: "CeraPRO-Regular", sans-serif, arial;
+    /*font-family: "CeraPRO-Regular", sans-serif, arial;*/
     font-weight: normal;
     color: #838F93;
     font-size: 16px;
@@ -852,7 +852,7 @@ p {
     color: #FFF;
     text-decoration: none;
     text-align: center;
-    font-family: "CeraPRO-Regular", sans-serif, arial;
+    /*font-family: "CeraPRO-Regular", sans-serif, arial;*/
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
@@ -869,7 +869,7 @@ p {
 }
 
 .cookie-consent-banner__cta:hover {
-    background-color: #4C74FC;
+    background-color: #3b82f6;
 }
 
 .cookie-consent-banner__cta--secondary:hover {

@@ -22,8 +22,8 @@ Bugs:
 ------------------------------------------------------SESSION 3
 (X) 1. Individuale -> switch intre detalii si pret, nu scross in jos (see pricing action)
 ( ) 2. SEO [la sfarsit de tot]
-( ) 3. Brands -> mai mari pe mobile
-( ) 4. Metodologie -> refacut walkthrough bar
+(X) 3. Brands -> mai mari pe mobile
+(X) 4. Metodologie -> refacut walkthrough bar
 ( ) 5. Sweetalert fute ceva styling
-( ) 6. Individuale pe mobile -> mici ajustari
+(X) 6. Individuale pe mobile -> mici ajustari
 

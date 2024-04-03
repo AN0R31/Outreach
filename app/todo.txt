@@ -20,7 +20,7 @@ Bugs:
 (X) 6. Contact -> User confirmation on page
 
 ------------------------------------------------------SESSION 3
-( ) 1. Individuale -> switch intre detalii si pret, nu scross in jos (see pricing action)
+(X) 1. Individuale -> switch intre detalii si pret, nu scross in jos (see pricing action)
 ( ) 2. SEO [la sfarsit de tot]
 ( ) 3. Brands -> mai mari pe mobile
 ( ) 4. Metodologie -> refacut walkthrough bar

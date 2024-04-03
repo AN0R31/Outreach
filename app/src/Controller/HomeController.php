@@ -24,6 +24,17 @@ class HomeController extends AbstractController
         return $this->render('home/landing.html.twig', []);
     }
 
+    #[Route(path: "/legal/{templateName}", name: "legal", methods: ['GET'])]
+    public function legal(string $templateName): Response
+    {
+        try {
+            return $this->render('home/legal/'.$templateName.'.html.twig', []);
+        } catch (\Exception $e) {
+            dd($e);
+            return $this->redirectToRoute('landing');
+        }
+    }
+
     #[Route(path: "/", methods: ['POST'])]
     public function landingPost(Request $request): Response
     {

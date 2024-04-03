@@ -16,12 +16,11 @@
 {% endblock %}
 
 {% block body %}
-    {% include 'general/header.html.twig' %}
     <div id="details" class="individuals-container">
         <h3 class="individuals-title">{{ context.title }}</h3>
         <div class="individuals-info-container">
             <p class="individuals-p">
-                {{ context.body1 }}{{ context.body2 }}
+                {{ context.body1 }} {{ context.body2 }}
                 <br><br>Vezi prețurile și serviciile noastre <u onclick="showPrices()" style="cursor: pointer">aici</u>.
             </p>
             <div style="width: 25%;">
@@ -57,9 +56,6 @@
             <div class="goto-contact-button" onclick="markCurrentPageAsSource()">Contacteaza-ne!</div>
         </div>
     </div>
-
-
-    {% include 'general/footer.html.twig' %}
 
     <script>
         function showPrices() {

@@ -817,6 +817,11 @@ p {
     justify-content: start;
 }
 
+.cookie-consent-banner__link {
+    color: #4C74FC;
+    text-decoration: underline;
+}
+
 .cookie-consent-banner__header {
     margin-bottom: 8px;
 

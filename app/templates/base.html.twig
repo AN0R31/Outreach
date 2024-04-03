@@ -15,7 +15,9 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% include 'general/cookieBanner.html.twig' %}
+    {% include 'general/header.html.twig' %}
+    {% block body %}{% endblock %}
+    {% include 'general/footer.html.twig' %}
+    {% include 'general/cookieBanner.html.twig' %}
     </body>
 </html>

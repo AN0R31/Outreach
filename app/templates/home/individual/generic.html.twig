@@ -17,19 +17,28 @@
 
 {% block body %}
     {% include 'general/header.html.twig' %}
-    <div class="individuals-container">
+    <div id="details" class="individuals-container">
         <h3 class="individuals-title">{{ context.title }}</h3>
         <div class="individuals-info-container">
-            <p class="individuals-p">{{ context.body1 }}{{ context.body2 }}</p>
-            <div style="width: 30%;">
+            <p class="individuals-p">
+                {{ context.body1 }}{{ context.body2 }}
+                <br><br>Vezi prețurile și serviciile noastre <u onclick="showPrices()" style="cursor: pointer">aici</u>.
+            </p>
+            <div style="width: 25%;">
                 <img style="width: 100%;" src="{{ asset('/assets/img/individuals/'~context.originalKey~'.png') }}">
             </div>
         </div>
     </div>
 
-    <div style="width: 100%; display: flex; justify-content: center;">
+    <div id="prices" style="margin-top: -75vh; width: 100%; display: none; justify-content: center;" class="go-to-top-on-mobile">
         <div class="plan-box">
-            <h4 style="color: white; font-size: 2.5em; margin: 0 0 40px 0;">Servicii</h4>
+            <div style="width: 100%; display: flex; justify-content: end; align-items: center; color: white;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                     class="w-6 h-6" style="width: 30px; height: 30px; cursor: pointer" onclick="hidePrices()">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <h4 style="color: white; font-size: 2.5em; margin: -10px 0 40px 0;">Servicii</h4>
 
             <div style="width: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
                 {% for item in context.attributes %}
@@ -51,4 +60,24 @@
 
 
     {% include 'general/footer.html.twig' %}
+
+    <script>
+        function showPrices() {
+            document.getElementById('details').style.opacity = '0.1';
+            document.getElementById('details').style.pointerEvents = 'none';
+            document.getElementById('details').style.zIndex = '-1';
+            document.getElementById('prices').style.display = 'flex';
+            document.getElementById('prices').style.zIndex = '10000';
+            document.getElementById('prices').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function hidePrices() {
+            document.getElementById('details').style.opacity = '1';
+            document.getElementById('details').style.pointerEvents = 'auto';
+            document.getElementById('details').style.zIndex = '10000';
+            document.getElementById('header').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('prices').style.display = 'none';
+            document.getElementById('prices').style.zIndex = '-1';
+        }
+    </script>
 {% endblock %}

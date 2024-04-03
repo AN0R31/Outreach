@@ -24,6 +24,6 @@ Bugs:
 ( ) 2. SEO [la sfarsit de tot]
 (X) 3. Brands -> mai mari pe mobile
 (X) 4. Metodologie -> refacut walkthrough bar
-( ) 5. Sweetalert fute ceva styling
+(X) 5. Sweetalert fute ceva styling
 (X) 6. Individuale pe mobile -> mici ajustari
 

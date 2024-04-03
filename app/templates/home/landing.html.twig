@@ -346,7 +346,9 @@
             icon: 'error',
             title: 'Oops...',
             text: '{{ error }}',
-            confirmationButtonColor: '#4C74FC'
+            confirmationButtonColor: '#4C74FC',
+            scrollbarPadding: false,
+            heightAuto: false,
         })
         {% else %}
         {% if source is defined and source == 'contact' %}
@@ -354,7 +356,9 @@
             icon: 'success',
             title: 'Multumim de contact!',
             text: 'Mesajul tau a fost trimis cu succes! Vom reveni in cel mai scurt timp posibil!',
-            confirmationButtonColor: '#4C74FC'
+            confirmationButtonColor: '#4C74FC',
+            scrollbarPadding: false,
+            heightAuto: false,
         })
         {% endif %}
         {% endif %}
